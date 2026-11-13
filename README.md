@@ -1,71 +1,103 @@
-# S-02: Mental Health Awareness Campaign for First-Year Students
 
-## Social Challenge
-**First-year university students experience significant mental health challenges — anxiety, homesickness, academic pressure — yet awareness of available resources is low and stigma remains high on most campuses.**
+# 🧠 MindBridge – Mental Health Awareness & Prediction System
 
-## Background
-Studies show 30-45% of university students experience significant mental health symptoms. The first semester is the highest-risk period. Timely awareness and destigmatization reduce dropout rates and improve wellbeing outcomes.
+MindBridge is a Machine Learning-powered mental health assessment platform designed to promote mental health awareness among students. It combines web development and Machine Learning to provide preliminary mental health score predictions based on user responses.
 
-## Project Objectives
-1. Assess baseline mental health awareness and resource knowledge among first-years
-2. Design and execute a multi-format awareness campaign (posters, videos, workshops)
-3. Conduct at least 3 peer-led discussion workshops on stress, anxiety, and help-seeking
-4. Create a resource map of on-campus and online mental health services
-5. Measure post-campaign changes in awareness and attitude
-6. Produce a reproducible campaign toolkit for future student bodies
+## 🚀 Features
 
-## Stakeholders
-| Stakeholder | Role |
-| :--- | :--- |
-| First-year UG students | Primary audience |
-| University counseling center | Partner and content validator |
-| Student clubs (peer supporters) | Co-facilitators |
-| Faculty advisor | Oversight |
-| Senior students (mentors) | Peer leadership |
+- Interactive mental health assessment
+- Machine Learning-based mental health score prediction
+- Random Forest Regression model
+- REST API integration using FastAPI
+- User-friendly web interface
+- Mental health awareness and support
 
-## Requirements
-- **Research**: Review campus counseling utilization data; study destigmatization campaign best practices (WHO, NIMHANS guidelines).
-- **Survey**: Pre-campaign: awareness of resources, stigma attitude scale (adapted); post-campaign: same instrument + campaign recall.
-- **Execution**: Campaign rollout via posters, social media, hostels; 3 workshops (stress management, sleep hygiene, help-seeking).
-- **Documentation**: All materials, workshop recordings (with consent), survey data, counseling center feedback.
+## 🛠️ Tech Stack
 
-## Implementation Plan
-| Week | Activity |
-| :--- | :--- |
-| 1 | Literature review, survey design, stakeholder meetings |
-| 2 | Pre-campaign survey; campaign material design |
-| 3 | Campaign launch (posters, Instagram, hostel noticeboards) |
-| 4 | Workshop 1 (stress & anxiety) + Workshop 2 (sleep & lifestyle) |
-| 5 | Workshop 3 (help-seeking & resources); resource map publication |
-| 6 | Post-survey, data analysis, toolkit compilation, final report |
+**Frontend**
+- React.js
+- Vite
+- JavaScript
+- HTML & CSS
 
-## Impact Metrics
-| Metric | Target |
-| :--- | :--- |
-| Students reached (campaign) | ≥ 300 |
-| Workshop participants | ≥ 75 |
-| Awareness improvement (survey) | ≥ 35% improvement |
-| Stigma score reduction | Measurable positive shift |
-| Resource map distribution | ≥ 200 students |
+**Backend**
+- Python
+- FastAPI
+- REST APIs
 
-## Expected Deliverables
-- [ ] Pre/post survey instrument and data analysis
-- [ ] Campaign materials (posters, social media graphics, video)
-- [ ] Resource map (printable + digital)
-- [ ] Workshop facilitation guides
-- [ ] Campaign toolkit (for reproducibility)
-- [ ] Final impact report
+**Machine Learning**
+- Scikit-learn
+- Random Forest Regressor
+- Pandas
+- Joblib
 
-## Evaluation Criteria
-| Criterion | Marks |
-| :--- | :--- |
-| Reach & Engagement | 25 |
-| Survey Design & Analysis Quality | 25 |
-| Campaign Material Quality | 20 |
-| Workshop Impact | 15 |
-| Documentation & Toolkit | 15 |
+## 🧠 Machine Learning Model
 
-## Bonus Impact Opportunities
-- Train 5 peer mental health ambassadors
-- Collaborate with the university counseling center on a helpline card
-- Publish a short research note in a university journal
+The project uses a trained Scikit-learn Pipeline stored in `Mental_Health_Model.pkl`.
+
+The pipeline consists of:
+
+1. **Preprocessor:** Processes input data.
+2. **Random Forest Regressor:** Predicts the mental health score.
+
+The model is loaded using Joblib and integrated with the FastAPI backend.
+
+## ⚙️ Installation & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/neha-gupta887/S-02-Mental-Health-Awareness-Campaign-for-First-Year-Students.git
+```
+
+### 2. Backend Setup
+
+```bash
+cd ml-service
+pip install fastapi uvicorn pandas scikit-learn joblib
+```
+
+### 3. Run Backend
+
+```bash
+uvicorn main:app --reload --port 8001
+```
+
+Backend runs at:
+
+`http://localhost:8001`
+
+### 4. Frontend Setup
+
+Open another terminal:
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+## 🔮 Future Enhancements
+
+- Improve prediction accuracy
+- Personalized mental wellness recommendations
+- User authentication
+- Mental health progress tracking
+- Advanced analytics dashboard
+
+## ⚠️ Disclaimer
+
+MindBridge is an educational project for mental health awareness and preliminary assessment. It does not provide medical diagnoses or replace professional mental health advice.
+
+## 👩‍💻 Developer
+
+**Neha Gupta**
+
+BE Computer Science Engineering
+
+- GitHub: [neha-gupta887](https://github.com/neha-gupta887)
+- LinkedIn: [Neha Gupta](https://www.linkedin.com/in/neha-gupta-82201a360/)
+
+---
+
+⭐ If you like this project, don't forget to give it a star!
